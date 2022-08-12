@@ -31,7 +31,6 @@
 | connectivity_node145_degree090.csv | 90               | 1867.236037 | 36000.2629  |
 | connectivity_node145_degree100.csv | 100              | 2080.763301 | 36000.17873 |
 | connectivity_node145_degree110.csv | 110              | 2228.956765 | 36000.78553 |
-|                                    |                  |             |             |
-| connectivity_node145_degree120.csv | 120              | 2228.956765 | 36000.78553 |
+| connectivity_node145_degree120.csv | 120              | 2383.127860 | 36000.78553 |
 | connectivity_node145_degree130.csv | 130              | 2551.283158 | 36000.14491 |
 | connectivity_node145_degree140.csv | 140              | 2735.036786 | 36000.14028 |
