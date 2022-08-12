@@ -40,27 +40,22 @@ def load_csv(filename):
 
 
 def qubo_maxcut(g):
-
-    linear = {}
-    quadratic = {}
-
+    linear = {k: 0 for k in g.nodes}
+    quadratic = {(k0, k1): 0 for k0, k1 in g.edges}
     for s, d, w in g.edges.data('weight'):
-
-        quadratic[(s, d)] = w
-
-    return linear, quadratic    
+        quadratic[(s, d)] += 2*w
+        linear[s] -= w
+        linear[d] -= w
+    return linear, quadratic
 
 
 # In[4]:
 
 
 def maxcut_energy(g, solution):
-    
     energy = 0
-    
     for k0, k1, w in g.edges.data('weight'):
-        energy += (solution[k0] - solution[k1]) ** 2 * w
-
+        energy += abs(solution[k0] - solution[k1]) * w
     return energy
 
 
